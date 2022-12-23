@@ -10,32 +10,35 @@
 
 <div class="container text-center">
 
-    <div class="row">
+    <div class="row" style="margin-top: 5%">
         <div class="col-4 text-center">
-            <img alt="logo" src="./media/opencv_logo.png" style="max-height: 150px"/>
+            <img alt="logo" src="./media/opencv_logo.png" style="max-height: 50px"/>
         </div>
         <div class="col-4">
-            <button id="histBtn" class="btn btn-sm btn-danger">histogram</button>
+            <button id="histBtn" class="btn btn-sm btn-danger" disabled>histogram</button>
         </div>
         <div class="col-4 text-end">
-            <input type="file" id="fileInput"/>
+<!--            <input type="file" id="fileInput"/>-->
+            <div id="readyInfo" class="alert alert-success" role="alert" style="display: none !important;">
+                Loaded! Camera is on!
+            </div>
         </div>
     </div>
 
     <div class="row" style="margin-top: 2%">
 
-        <div class="col-6">
+        <div class="col-xxl-6">
             <!--<img id="imageSrc" style="max-width: 600px"/>-->
             <video id="video" hidden></video>
-            <canvas id="output"></canvas>
+            <canvas class="rounded" id="output"></canvas>
         </div>
 
 
-        <div class="col-6">
+        <div class="col-xxl-6">
             <canvas id="firstCanvas" hidden></canvas>
             <canvas id="helperCanvas" hidden></canvas>
 
-            <canvas id="canvasOutput"></canvas>
+            <canvas class="rounded" id="canvasOutput"></canvas>
         </div>
     </div>
     <div class="row">

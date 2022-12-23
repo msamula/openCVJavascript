@@ -10,7 +10,7 @@ export function histogram(imgElement, canvasOutputID){
     let hist = new cv.Mat();
     let mask = new cv.Mat();
     let color = new cv.Scalar(0, 255, 0);
-    let scale = 2.8;
+    let scale = 2.5;
 
 // You can try more different parameters
     cv.calcHist(srcVec, channels, mask, hist, histSize, ranges, accumulate);
